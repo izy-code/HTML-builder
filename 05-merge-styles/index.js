@@ -4,7 +4,7 @@ const { readdir } = require('fs/promises');
 const { pipeline } = require('stream/promises');
 
 const BUNDLE_PATH = 'project-dist/bundle.css';
-const STYLES_PATH = 'test-files/styles';
+const STYLES_PATH = 'styles';
 
 const bundlePath = resolve(__dirname, BUNDLE_PATH);
 const stylesPath = resolve(__dirname, STYLES_PATH);
