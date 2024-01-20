@@ -3,9 +3,10 @@ const { readdir, stat } = require('fs/promises');
 
 const FOLDER_NAME = 'secret-folder';
 
+const folderPath = resolve(__dirname, FOLDER_NAME);
+
 const displayFilesData = async () => {
   try {
-    const folderPath = resolve(__dirname, FOLDER_NAME);
     const names = await readdir(folderPath);
 
     for (const name of names) {
