@@ -15,10 +15,10 @@ const terminateProcess = () => {
   exit();
 };
 
-fs.writeFile(textFilePath, '', (err) => {
-  if (err) throw err;
-
-  stdout.write('Please enter the text you want to write to the text file:\n');
+fs.writeFile(textFilePath, '', (error) => {
+  error
+    ? stdout.write(`File creation error. ${error.message}`)
+    : stdout.write('Enter the text you want to write to the text file:\n');
 });
 
 input.on('line', (lineInput) => {
