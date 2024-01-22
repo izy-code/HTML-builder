@@ -30,6 +30,8 @@ const bundleStyles = async () => {
         await pipeline(readStream, writeStream, { end: false });
       }
     }
+
+    writeStream.close();
   } catch (error) {
     console.error(error.message);
   }
